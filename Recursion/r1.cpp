@@ -26,9 +26,31 @@ void brev(int i,int n){
     if(i>n) return;
      brev(i+1,n);
      cout<<i<<endl;}
+int sum(int n,int tot){
+    if(n==0)
+    return tot;
+
+    return sum(n-1,tot+n);
+
+}
+
+int fsum(int n){
+    if (n==0) return 0;
+    return n+fsum(n-1);
+}
+int fact(int n,int tot){
+    if(n==0)
+    return tot;
+
+    return fact(n-1,tot*n);}
+
+int ffact(int n){
+    if(n==0) return 1;
+    return n*ffact(n-1);
+}
 
 int main(){
     int n;
     cin>>n;
-    brev(1,n);
+    cout<<ffact(n)<<endl;
 }
