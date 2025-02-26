@@ -3,7 +3,7 @@ using namespace std;
 //upper bound:smallest index such that arr[ind]>target
 class Solution {
     public:
-        int lower_bnd(vector<int>& nums, int target) {
+        int Upper_bnd(vector<int>& nums, int target) {
             //STL for lowerbound
          int ub=upper_bound(nums.begin(),nums.end(),target)-nums.begin();
             //code 
